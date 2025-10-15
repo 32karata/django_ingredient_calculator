@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <h1>Количество ингредиентов</h1>
+    {% if recipe %}
+        <ul>
+        {% for i, q in recipe.items %}
+            <li>{{ i }}: {{ q }}</li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>Рецепт не найден</p>
+    {% endif %}
+</body>
+</html>
